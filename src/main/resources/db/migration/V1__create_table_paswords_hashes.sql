@@ -1,0 +1,8 @@
+CREATE TABLE passwords_hashes (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    password VARCHAR(255) NOT NULL UNIQUE,
+    md5_hash CHAR(32) NOT NULL UNIQUE,
+    sha1_hash CHAR(40) NOT NULL UNIQUE,
+    sha256_hash CHAR(64) NOT NULL UNIQUE,
+    sha512_hash CHAR(128) NOT NULL UNIQUE
+);
