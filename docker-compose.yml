@@ -1,0 +1,30 @@
+version: '2.4'
+
+services:
+  rainbow-raider-db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PWD}
+      - POSTGRES_DB=rainbow_raider
+    ports:
+        - "5436:5432"
+    networks:
+      - raibow-raider-network
+  rainbow-raider-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tyto/rainbow-raider-api
+    env_file:
+        - .env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rainbow-raider-db
+    networks:
+      - raibow-raider-network
+
+networks:
+  raibow-raider-network:
+    driver: bridge
