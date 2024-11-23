@@ -22,16 +22,16 @@ public class PasswordHash {
     @Column(nullable = false, unique = true)
     private String password;
 
-    @Column(nullable = false, unique = true, length = 32)
+    @Column(nullable = false, unique = true, length = 32, name="md5_hash")
     private String md5Hash;
 
-    @Column(nullable = false, unique = true, length = 40)
+    @Column(nullable = false, unique = true, length = 40, name = "sha1_hash")
     private String sha1Hash;
 
-    @Column(nullable = false, unique = true, length = 64)
+    @Column(nullable = false, unique = true, length = 64, name = "sha256_hash")
     private String sha256Hash;
 
-    @Column(nullable = false, unique = true, length = 128)
+    @Column(nullable = false, unique = true, length = 128, name = "sha512_hash")
     private String sha512Hash;
 
 }

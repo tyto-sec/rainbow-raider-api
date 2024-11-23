@@ -13,7 +13,7 @@ public class PasswordHashController {
 
     private final PasswordHashService passwordHashService;
 
-    @PostMapping("/wordlist/upload")
+    @PostMapping("/wordlist")
     public ResponseEntity<String> uploadWordlist(@RequestParam("file") MultipartFile file) {
         String response = passwordHashService.uploadWordlist(file);
         return ResponseEntity.ok(response);
