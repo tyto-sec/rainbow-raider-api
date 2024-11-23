@@ -2,7 +2,7 @@
 
 ### **Description**
 
-The **Rainbow Raider API** is a tool designed to facilitate a Rainbow Table attack on hashes such as MD5, SHA-1, SHA-256, and SHA-512 stored in a database. The API provides an endpoint for uploading plaintext password wordlists, converting them into their respective hashes, and storing them in the database.
+The **Rainbow Raider API** is a tool designed to simulate a Rainbow Table attack on hashes such as MD5, SHA-1, SHA-256, and SHA-512 stored in a database. The API provides an endpoint for uploading plaintext password wordlists, converting them into their respective hashes, and storing them in the database.
 
 
 ### **Features**
